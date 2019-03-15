@@ -17,9 +17,11 @@ if (!process.env.DISABLE_XORIGIN) {
     next();
   });
 } 
-app.get('/', (req, res) => {
-  res.end('Hello World!')
-})
+app.get('*', (req, res) => {
+  console.log("Hello World");
+  res.end('Hello World');
+  
+});
 
 app.listen(3000, ()=> {
   console.log("Hello World");
